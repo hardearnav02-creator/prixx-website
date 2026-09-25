@@ -13,6 +13,12 @@ export const CinematicPreloader: React.FC<CinematicPreloaderProps> = ({ onComple
   const [phase, setPhase] = useState<number>(0);
 
   useEffect(() => {
+    // Skip preloader entirely on mobile to save 2.6s load time
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      onComplete();
+      return;
+    }
+
     const t1 = setTimeout(() => setPhase(1), 300);   // Letter assembly
     const t2 = setTimeout(() => setPhase(2), 1000);  // Pulse tagline
     const t3 = setTimeout(() => setPhase(3), 1800);  // Monumental reveal

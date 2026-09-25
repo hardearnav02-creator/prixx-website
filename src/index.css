@@ -102,6 +102,24 @@ body {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Mobile optimized glass - lighter blur to reduce paint/composite cost */
+@media (max-width: 768px) {
+  .glass-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-pill {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .glass-input {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
 .glass-panel:hover {
   border-color: rgba(220, 38, 38, 0.4);
   background: rgba(20, 20, 20, 0.95);

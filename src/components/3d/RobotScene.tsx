@@ -78,28 +78,32 @@ export const RobotScene: React.FC<RobotSceneProps> = ({
     scene.add(gridHelper);
 
     // 2. Camera & Lighting
+    const isMobile = window.innerWidth < 768;
     const width = container.clientWidth || 800;
-    const height = container.clientHeight || 500;
+    const height = container.clientHeight || (isMobile ? 360 : 500);
     const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 100);
     const cameraRig = createCameraRig(camera);
     rigRef.current = cameraRig;
 
     setupSceneLighting(scene);
 
-    // 3. WebGL Renderer with performance clamping
+    // 3. WebGL Renderer with performance clamping (Mobile Optimized)
     try {
       renderer = new THREE.WebGLRenderer({
         canvas,
-        antialias: true,
-        powerPreference: 'high-performance',
+        antialias: !isMobile, // Disable on mobile to save 40% GPU fillrate
+        powerPreference: isMobile ? 'default' : 'high-performance',
         stencil: false,
         depth: true,
       });
 
       renderer.setSize(width, height, false);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.shadowMap.enabled = true;
-      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      // Clamp pixel ratio to 1 on mobile to prevent GPU lag
+      renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 1.75));
+      renderer.shadowMap.enabled = !isMobile;
+      if (!isMobile) {
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      }
     } catch (err) {
       console.error('WebGL initialization error:', err);
       queueMicrotask(() => setHasError(true));

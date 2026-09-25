@@ -46,6 +46,11 @@ export const ScrollRouteBot: React.FC<ScrollRouteBotProps> = ({
 
   // High-performance scroll listener & animation loop
   useEffect(() => {
+    // Disable on mobile/tablet where the route spline & bot are hidden (hidden lg:block)
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      return;
+    }
+
     stateRef.current.lastTime = performance.now();
     const path = pathRef.current;
     if (!path) return;
