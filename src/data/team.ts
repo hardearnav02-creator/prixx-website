@@ -314,6 +314,46 @@ export const coreTeamMembers: TeamMember[] = [
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
     mediaPlaceholder: 'Shweta Shirsat leading robotics project',
     division: 'AI & Software'
+  },
+  {
+    id: 'sanika-joshi',
+    number: '16',
+    name: 'Sanika Joshi',
+    role: 'Senior Guide · Automation & Hardware',
+    shortRole: 'Senior Guide · Automation',
+    description: 'Senior engineering mentor and guide specializing in robotics automation, structural hardware architectures, and project guidance.',
+    achievements: [
+      'Senior Guide — Automation & Hardware Architectures',
+      'Computer Engineering (CE) Department Leadership',
+      'Autonomous Systems & Hardware Integration'
+    ],
+    accent: 'red',
+    featured: true,
+    projects: ['Automation Control Systems', 'Hardware Integration Rig'],
+    tags: ['Senior Guide', 'CE', 'Automation', 'Hardware', 'Mentorship'],
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80',
+    mediaPlaceholder: 'Sanika Joshi in engineering laboratory',
+    division: 'Combat & Hardware'
+  },
+  {
+    id: 'mahek-varma',
+    number: '17',
+    name: 'Mahek Varma',
+    role: 'Senior Guide · Automation & Hardware',
+    shortRole: 'Senior Guide · Hardware',
+    description: 'Senior technical mentor and guide focusing on embedded hardware integration, automated workflows, and data systems.',
+    achievements: [
+      'Senior Guide — Automation & Hardware Development',
+      'Computer Science & Data Science (CSDS) Lead',
+      'Advanced Automation & Embedded Protocols'
+    ],
+    accent: 'blue',
+    featured: true,
+    projects: ['Industrial Automation Hub', 'Data & Hardware Pipelines'],
+    tags: ['Senior Guide', 'CSDS', 'Automation', 'Hardware', 'Mentorship'],
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80',
+    mediaPlaceholder: 'Mahek Varma mentoring robotics hardware',
+    division: 'Combat & Hardware'
   }
 ];
 
