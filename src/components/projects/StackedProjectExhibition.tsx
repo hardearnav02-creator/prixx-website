@@ -79,20 +79,30 @@ export const StackedProjectExhibition: React.FC<StackedProjectExhibitionProps> =
 
   // Touch Swipe strictly on image deck for mobile/tablet
   const handleTouchStart = (e: React.TouchEvent) => {
+    // Prevent page scroll when touch starts on the image deck
+    e.stopPropagation();
     touchStartYRef.current = e.touches[0].clientY;
   };
 
+  const handleTouchMove = (e: React.TouchEvent) => {
+    // Prevent page scroll while finger is moving on the image deck
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   const handleTouchEnd = (e: React.TouchEvent) => {
+    e.stopPropagation();
     const touchEndY = e.changedTouches[0].clientY;
     const deltaY = touchStartYRef.current - touchEndY;
     const now = Date.now();
 
     if (now - lastScrollTimeRef.current < 450) return;
 
-    if (deltaY > 30) {
+    // Vertical swipe threshold: 50px minimum to change card
+    if (deltaY > 50) {
       lastScrollTimeRef.current = now;
       goToNext();
-    } else if (deltaY < -30) {
+    } else if (deltaY < -50) {
       lastScrollTimeRef.current = now;
       goToPrev();
     }
@@ -286,11 +296,12 @@ export const StackedProjectExhibition: React.FC<StackedProjectExhibitionProps> =
               onMouseEnter={() => setIsDeckHovered(true)}
               onMouseLeave={() => setIsDeckHovered(false)}
               onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
               data-lenis-prevent
               data-cursor="SCROLL"
               className="relative w-[300px] sm:w-[350px] md:w-[380px] h-[460px] sm:h-[520px] flex items-center justify-center cursor-ns-resize group select-none"
-              style={{ touchAction: 'pan-y' }}
+              style={{ touchAction: 'none' }}
             >
               {/* Circular Counter Badge Floating alongside Deck */}
               <div className="absolute -top-3 right-0 sm:-right-4 z-40">
