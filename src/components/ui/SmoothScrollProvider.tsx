@@ -13,6 +13,17 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ chil
   useEffect(() => {
     if (reducedMotion) return;
 
+    // Detect touch / mobile devices — do NOT hijack touch events on mobile
+    // Native momentum scrolling on iOS and Android provides the best 120Hz performance.
+    const isTouchDevice =
+      typeof window !== 'undefined' &&
+      ('ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth < 768);
+
+    if (isTouchDevice) {
+      // Allow browser native smooth touch scrolling on mobile devices
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -20,7 +31,7 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ chil
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 0.9,
-      touchMultiplier: 1.5,
+      touchMultiplier: 0, // Never hijack touch gestures
       infinite: false
     });
 
@@ -39,3 +50,4 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ chil
 
   return <>{children}</>;
 };
+

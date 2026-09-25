@@ -21,8 +21,11 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
   return (
     <div className="relative w-full overflow-hidden select-none py-4">
       {/* Horizontal Liquid Glass Runway */}
-      <div className="relative w-full overflow-x-auto pb-12 pt-4 no-scrollbar cursor-grab active:cursor-grabbing">
-        <div className="flex items-stretch gap-6 sm:gap-8 min-w-max px-2 sm:px-4">
+      <div
+        className="relative w-full overflow-x-auto pb-12 pt-4 no-scrollbar cursor-grab active:cursor-grabbing"
+        style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-x pan-y' }}
+      >
+        <div className="flex items-stretch gap-4 sm:gap-8 min-w-max px-2 sm:px-4">
           {members.map((member, index) => {
             const isHovered = activeHoverId === member.id;
             const isOdd = index % 2 === 1;
@@ -36,8 +39,8 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: index * 0.04, ease: [0.16, 1, 0.3, 1] }}
-                className={`relative w-[320px] sm:w-[380px] md:w-[420px] flex flex-col justify-between p-6 sm:p-7 cursor-pointer transition-all duration-300 rounded-2xl ${
-                  isOdd ? 'mt-6 sm:mt-10' : 'mt-0'
+                className={`relative w-[280px] sm:w-[380px] md:w-[420px] flex flex-col justify-between p-5 sm:p-7 cursor-pointer transition-all duration-300 rounded-2xl ${
+                  isOdd ? 'mt-4 sm:mt-10' : 'mt-0'
                 } glass-panel border border-white/10 hover:border-red-600/50 hover:bg-white/[0.05]`}
                 style={{
                   boxShadow: isHovered

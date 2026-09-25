@@ -290,7 +290,7 @@ export const StackedProjectExhibition: React.FC<StackedProjectExhibitionProps> =
               data-lenis-prevent
               data-cursor="SCROLL"
               className="relative w-[300px] sm:w-[350px] md:w-[380px] h-[460px] sm:h-[520px] flex items-center justify-center cursor-ns-resize group select-none"
-              style={{ touchAction: 'none' }}
+              style={{ touchAction: 'pan-y' }}
             >
               {/* Circular Counter Badge Floating alongside Deck */}
               <div className="absolute -top-3 right-0 sm:-right-4 z-40">

@@ -198,7 +198,14 @@ export const RobotScene: React.FC<RobotSceneProps> = ({
     isDraggingRef.current = true;
     prevPointerPosRef.current = { x: e.clientX, y: e.clientY };
     setIsInteracting(true);
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    // Only capture pointer for non-touch (mouse/pen) to allow vertical touch page scrolling on mobile
+    if (e.pointerType !== 'touch') {
+      try {
+        (e.target as HTMLElement).setPointerCapture(e.pointerId);
+      } catch {
+        // Ignore pointer capture errors
+      }
+    }
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
@@ -207,7 +214,7 @@ export const RobotScene: React.FC<RobotSceneProps> = ({
       const deltaY = e.clientY - prevPointerPosRef.current.y;
       prevPointerPosRef.current = { x: e.clientX, y: e.clientY };
       rigRef.current.addRotation(deltaX, deltaY);
-    } else if (containerRef.current && rigRef.current) {
+    } else if (containerRef.current && rigRef.current && e.pointerType !== 'touch') {
       const rect = containerRef.current.getBoundingClientRect();
       const normX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       const normY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
@@ -232,7 +239,8 @@ export const RobotScene: React.FC<RobotSceneProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full h-full min-h-[440px] lg:min-h-[540px] rounded-2xl bg-[#0a0a0a] select-none overflow-hidden ${className}`}
+      className={`relative w-full h-full min-h-[360px] sm:min-h-[440px] lg:min-h-[540px] rounded-2xl bg-[#0a0a0a] select-none overflow-hidden ${className}`}
+      style={{ touchAction: 'pan-y' }}
       data-cursor="DRAG"
     >
       {/* 3D WebGL Canvas */}
@@ -241,6 +249,7 @@ export const RobotScene: React.FC<RobotSceneProps> = ({
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
+        style={{ touchAction: 'pan-y' }}
         className={`w-full h-full block cursor-grab active:cursor-grabbing ${
           isInteracting ? 'cursor-grabbing' : ''
         }`}
