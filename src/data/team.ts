@@ -383,8 +383,28 @@ export const juniorMembers: TeamMember[] = [
     isJunior: true,
   },
   {
-    id: 'aman-narkhede',
+    id: 'nidhi-mishra',
     number: '02',
+    name: 'Nidhi Mishra',
+    role: 'Dashboard Development & R&D',
+    shortRole: 'Dashboard & R&D',
+    description: 'CSEDS engineer specializing in telemetry dashboard development, data analytics, and research prototyping.',
+    achievements: [
+      'Smart India Hackathon (SIH) 2K26',
+      'Telemetry Dashboard & Systems R&D'
+    ],
+    accent: 'blue',
+    featured: false,
+    projects: ['Telemetry Dashboard Rig', 'Data Visualization System'],
+    tags: ['CSEDS', 'Dashboard Dev', 'R&D', 'SIH 2K26', 'Data Science'],
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+    mediaPlaceholder: 'Nidhi Mishra in engineering lab',
+    division: 'Junior Members',
+    isJunior: true,
+  },
+  {
+    id: 'aman-narkhede',
+    number: '03',
     name: 'Aman Narkhede',
     role: 'CAD Designer & Mechanical Hardware',
     shortRole: 'CAD & Hardware',
@@ -404,7 +424,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'parth-sontakke',
-    number: '03',
+    number: '04',
     name: 'Parth Sontakke',
     role: 'Structural Assembly & Hardware R&D',
     shortRole: 'Assembly & R&D',
@@ -424,7 +444,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'swara-haralkar',
-    number: '04',
+    number: '05',
     name: 'Swara Haralkar',
     role: 'Electronics R&D & Embedded Software',
     shortRole: 'Electronics & R&D',
@@ -444,7 +464,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'janhavi-lekurwale',
-    number: '05',
+    number: '06',
     name: 'Janhavi Lekurwale',
     role: 'Hardware Components & Systems R&D',
     shortRole: 'Hardware & R&D',
@@ -464,7 +484,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'satyam-mandekar',
-    number: '06',
+    number: '07',
     name: 'Satyam Mandekar',
     role: 'AI, Robotics & Embedded Systems Lead',
     shortRole: 'AI & Embedded Lead',
@@ -484,7 +504,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'pratiksha-bhanavase',
-    number: '07',
+    number: '08',
     name: 'Pratiksha Bhanavase',
     role: 'Electronic Components & Hardware R&D',
     shortRole: 'Hardware & Software',
@@ -504,7 +524,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'balaji-gurav',
-    number: '08',
+    number: '09',
     name: 'Balaji Gurav',
     role: 'Hardware & Software Engineering',
     shortRole: 'Hardware & Software',
@@ -524,7 +544,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'shubham-panchal',
-    number: '09',
+    number: '10',
     name: 'Shubham Panchal',
     role: 'Web Development & Embedded Systems',
     shortRole: 'Web & Embedded',
@@ -544,7 +564,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'disha-shetty',
-    number: '10',
+    number: '11',
     name: 'Disha Shetty',
     role: 'CAD Design & Mechanical Hardware R&D',
     shortRole: 'CAD & Hardware R&D',
@@ -564,7 +584,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'bhakti-mantri',
-    number: '11',
+    number: '12',
     name: 'Bhakti Mantri',
     role: 'Hardware & Embedded Software Engineering',
     shortRole: 'Hardware & Software',
@@ -584,7 +604,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'vrujuta-sawant',
-    number: '12',
+    number: '13',
     name: 'Vrujuta Sawant',
     role: 'UI/UX Interface & Software R&D',
     shortRole: 'UI/UX & Software',
@@ -604,7 +624,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'meghraj-mhetre',
-    number: '13',
+    number: '14',
     name: 'Meghraj Mhetre',
     role: 'Embedded Systems & Bot Design Specialist',
     shortRole: 'Embedded & Design',
@@ -624,7 +644,7 @@ export const juniorMembers: TeamMember[] = [
   },
   {
     id: 'vanshika-shaily',
-    number: '14',
+    number: '15',
     name: 'Vanshika Shaily',
     role: 'Software Development & Computer Vision',
     shortRole: 'Software & Vision',
@@ -639,26 +659,6 @@ export const juniorMembers: TeamMember[] = [
     tags: ['Computer Engg', 'Software Dev', 'Computer Vision', 'Component Integration', 'SIH 2K26'],
     image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80',
     mediaPlaceholder: 'Vanshika Shaily in software lab',
-    division: 'Junior Members',
-    isJunior: true,
-  },
-  {
-    id: 'nidhi-mishra',
-    number: '15',
-    name: 'Nidhi Mishra',
-    role: 'Dashboard Development & R&D',
-    shortRole: 'Dashboard & R&D',
-    description: 'CSEDS engineer specializing in telemetry dashboard development, data analytics, and research prototyping.',
-    achievements: [
-      'Smart India Hackathon (SIH) 2K26',
-      'Telemetry Dashboard & Systems R&D'
-    ],
-    accent: 'blue',
-    featured: false,
-    projects: ['Telemetry Dashboard Rig', 'Data Visualization System'],
-    tags: ['CSEDS', 'Dashboard Dev', 'R&D', 'SIH 2K26', 'Data Science'],
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
-    mediaPlaceholder: 'Nidhi Mishra in engineering lab',
     division: 'Junior Members',
     isJunior: true,
   },
