@@ -290,18 +290,6 @@ const AchievementSpatialCard: React.FC<AchievementSpatialCardProps> = ({
           <span className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 font-mono text-[10px] text-white/70 font-bold uppercase">
             {achievement.year}
           </span>
-
-          {/* Kinetic Collision Badge */}
-          {isCollided && (
-            <motion.span
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/80 text-amber-300 font-mono text-[10px] font-black uppercase tracking-wider animate-pulse flex items-center gap-1.5 shadow-[0_0_15px_rgba(245,158,11,0.4)]"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#F59E0B] animate-ping" />
-              <span>COLLIDED // DOCKED</span>
-            </motion.span>
-          )}
         </div>
 
         {/* Concentric circled step badge */}

@@ -271,7 +271,7 @@ export const coreTeamMembers: TeamMember[] = [
     accent: 'red',
     projects: ['Chassis Rapid Prototyping', 'PVPIT Fabrication Rig'],
     tags: ['PVPIT Awardee', 'Rapid Prototyping', 'CNC Machining', 'Fabrication'],
-    image: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/team/viraj-nivelkar.png',
     mediaPlaceholder: 'Viraj prototyping at hackathon',
     division: 'Junior Innovation'
   },
