@@ -127,8 +127,8 @@ export const coreTeamMembers: TeamMember[] = [
     accent: 'red',
     projects: ['Telemetry ESC Architecture', 'Cloud Dashboard'],
     tags: ['GDG Cloud 2025', 'GDG AI 2.0', 'Russia Delegate', 'Power Systems'],
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80',
-    mediaPlaceholder: 'Raj at Google Developer Group event',
+    image: '/assets/team/raj-biharilal-mishra.png',
+    mediaPlaceholder: 'Raj with trophies',
     division: 'AI & Software'
   },
   {
@@ -146,8 +146,8 @@ export const coreTeamMembers: TeamMember[] = [
     accent: 'blue',
     projects: ['Kurukshetra Combat Strategy', 'Agritech Sensor Suite'],
     tags: ['Russia Delegate', 'Kurukshetra 2nd Prize', 'InnovataYou 3.0', 'Analytics'],
-    image: 'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?auto=format&fit=crop&w=800&q=80',
-    mediaPlaceholder: 'Shanir at Kurukshetra or InnovataYou',
+    image: '/assets/team/shanir-dileep-patil.png',
+    mediaPlaceholder: 'Shanir with trophy and Indian flag',
     division: 'Strategy & Flight'
   },
   {
