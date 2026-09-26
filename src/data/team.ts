@@ -262,7 +262,7 @@ export const coreTeamMembers: TeamMember[] = [
     number: '13',
     name: 'Viraj Nivelkar',
     role: 'Junior Innovation Team',
-    shortRole: 'Robotics & Automaation',
+    shortRole: 'Robotics & Automation',
     description: 'Rapid mechanical fabrication specialist supporting CNC machining, laser profiling, and test assemblies.',
     achievements: [
       'PVPIT Internal Hackathon Awardee',

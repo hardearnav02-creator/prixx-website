@@ -81,16 +81,16 @@ export const MinimalNavigation: React.FC<MinimalNavigationProps> = ({
                   onClick={() => handleSelectPage(item.id)}
                   className={`relative px-4 py-2 rounded-full font-mono text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                     isActive
-                      ? 'text-white bg-gradient-to-r from-red-600/60 to-red-800/60 border border-red-600/50 shadow-[0_0_20px_rgba(0,240,255,0.3)]'
+                      ? 'text-white bg-red-600 border border-red-500 shadow-[0_0_15px_rgba(220,38,38,0.4)]'
                       : 'text-white/60 hover:text-white hover:bg-white/[0.06]'
                   }`}
                 >
-                  <span className="text-[10px] text-red-600/90">{item.number}</span>
+                  <span className="text-[10px] text-white/80">{item.number}</span>
                   <span>{item.label}</span>
                   {isActive && (
                     <motion.div
                       layoutId="active-pill-glow"
-                      className="absolute inset-0 rounded-full bg-red-600/10 pointer-events-none"
+                      className="absolute inset-0 rounded-full bg-red-600/20 pointer-events-none"
                       transition={{ type: 'spring', stiffness: 350, damping: 30 }}
                     />
                   )}
@@ -161,7 +161,7 @@ export const MinimalNavigation: React.FC<MinimalNavigationProps> = ({
                       onClick={() => handleSelectPage(item.id)}
                       className={`group flex flex-col sm:flex-row sm:items-center justify-between p-5 sm:p-7 rounded-2xl border transition-all cursor-pointer ${
                         isSelected
-                          ? 'bg-white/[0.06] border-red-600/50 shadow-[0_0_35px_rgba(0,240,255,0.15)]'
+                          ? 'bg-white/[0.06] border-red-600/50 shadow-[0_0_35px_rgba(220,38,38,0.25)]'
                           : 'bg-white/[0.02] border-white/10 hover:border-white/25 hover:bg-white/[0.04]'
                       }`}
                     >

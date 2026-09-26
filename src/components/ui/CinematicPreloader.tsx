@@ -116,11 +116,11 @@ export const CinematicPreloader: React.FC<CinematicPreloaderProps> = ({ onComple
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="space-y-4"
               >
-                <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-white uppercase text-gradient-silver">
+                <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-white uppercase">
                   PRIXX <br />
-                  <span className="text-gradient-ruby">ROBOTICS</span>
+                  <span className="text-red-500">ROBOTICS</span>
                 </h1>
-                <div className="font-mono text-sm sm:text-base font-bold text-red-600 tracking-widest uppercase">
+                <div className="font-mono text-sm sm:text-base font-bold text-red-500 tracking-widest uppercase">
                   EDITION 25—26 // PUNE, INDIA
                 </div>
               </motion.div>
@@ -130,7 +130,7 @@ export const CinematicPreloader: React.FC<CinematicPreloaderProps> = ({ onComple
           {/* Bottom telemetry line */}
           <div className="flex items-center justify-between font-mono text-[10px] text-white/40 border-t border-white/10 pt-4 relative z-10">
             <span>BAVDHAN CAMPUS HQ</span>
-            <span className="text-red-600/70">INITIALIZING LIQUID GLASS ENGINE...</span>
+            <span className="text-red-500/80">LOADING WORKSHOP TELEMETRY &amp; BLUEPRINTS...</span>
             <span>2026 ARCHIVE</span>
           </div>
         </motion.div>

@@ -1,8 +1,7 @@
 // src/components/sections/SignalSection.tsx
-// CHAPTER 05 — THE SIGNAL / TRANSMISSION HQ (LIQUID GLASS EXPERIENCE)
-// Visual Atmosphere: Dark Obsidian with Neon Ruby & Cyan Glows, Frosted Glass Terminal Console.
+// CHAPTER 05 — THE SIGNAL / TRANSMISSION HQ
+// Visual Atmosphere: Dark Obsidian (#0a0a0a), Crisp Monospace Telemetry, Ruby & Metallic Accents.
 // Narrative conclusion: "BUILD. BATTLE. REPEAT."
-// Inspired by Mind Robotics & Boon Global
 
 import { useState, FormEvent } from 'react';
 import { ArrowUp, ArrowLeft, Disc3, Send, CheckCircle2, Terminal } from 'lucide-react';
@@ -40,14 +39,14 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
   const socialChannels = socialLinks.filter((s) => s.category === 'social');
 
   return (
-    <div className="min-h-screen text-white pt-20 relative z-10 selection:bg-rose-500 selection:text-white flex flex-col justify-between">
+    <div className="min-h-screen text-white pt-20 relative z-10 selection:bg-red-600 selection:text-black flex flex-col justify-between">
       <div className="max-w-[90rem] mx-auto w-full px-4 sm:px-8 md:px-12 py-12 space-y-10">
         {/* ========================================================================= */}
         {/* 1. TOP TRANSMISSION BAR                                                   */}
         {/* ========================================================================= */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4 font-mono text-xs font-bold uppercase">
           <div className="flex items-center gap-3">
-            <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[11px]">
+            <span className="px-3 py-1 rounded-full bg-red-600/20 text-red-400 border border-red-600/30 text-[11px]">
               CHAPTER 05 // THE SIGNAL
             </span>
             <span className="hidden sm:inline font-medium text-white/70">
@@ -65,7 +64,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
             </button>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 px-4 py-2 rounded-full glass-pill border border-white/10 text-white hover:border-rose-400 hover:bg-white/10 transition-all cursor-pointer text-xs"
+              className="flex items-center gap-2 px-4 py-2 rounded-full glass-pill border border-white/10 text-white hover:border-red-500 hover:bg-white/10 transition-all cursor-pointer text-xs"
             >
               <span>TOP</span>
               <ArrowUp className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -77,9 +76,9 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
         {/* 2. REFINED SCALE TYPOGRAPHY: "BUILD. BATTLE. REPEAT."                     */}
         {/* ========================================================================= */}
         <div className="py-2 space-y-3">
-          <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight uppercase select-none text-gradient-ruby">
+          <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight uppercase select-none text-white">
             BUILD. <br />
-            BATTLE. <br />
+            <span className="text-red-500">BATTLE.</span> <br />
             REPEAT.
           </h1>
           <p className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-white/60 max-w-xl pt-1">
@@ -96,7 +95,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Communications */}
               <div className="glass-panel p-5 border border-white/10 space-y-3">
-                <span className="text-xs font-bold text-rose-400 uppercase block tracking-wider">
+                <span className="text-xs font-bold text-red-500 uppercase block tracking-wider">
                   COMMUNICATIONS
                 </span>
                 <ul className="space-y-2 text-xs font-bold">
@@ -117,7 +116,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
 
               {/* Media & Social */}
               <div className="glass-panel p-5 border border-white/10 space-y-3">
-                <span className="text-xs font-bold text-red-600 uppercase block tracking-wider">
+                <span className="text-xs font-bold text-red-500 uppercase block tracking-wider">
                   MEDIA &amp; SOCIAL
                 </span>
                 <ul className="space-y-2 text-xs font-bold">
@@ -163,7 +162,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
                       onClick={() => onNavigate('pilots')}
                       className="strikethrough-link text-left text-white/80 hover:text-red-500 uppercase cursor-pointer text-[11px]"
                     >
-                      03. MEMBERS
+                      03. THE CREW
                     </button>
                   </li>
                   <li>
@@ -171,7 +170,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
                       onClick={() => onNavigate('projects')}
                       className="strikethrough-link text-left text-white/80 hover:text-red-500 uppercase cursor-pointer text-[11px]"
                     >
-                      04. THE LAB
+                      04. THE MACHINES
                     </button>
                   </li>
                 </ul>
@@ -181,7 +180,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
             {/* Video Feed Preview: Rotor Telemetry */}
             <div className="pt-2 space-y-2">
               <div className="flex items-center gap-2 font-mono text-xs font-bold text-white/90 uppercase">
-                <Disc3 className="w-3.5 h-3.5 animate-spin text-rose-400" />
+                <Disc3 className="w-3.5 h-3.5 animate-spin text-red-500" />
                 <span>WEAPON ROTOR TESTBENCH</span>
               </div>
               <div className="glass-panel p-2 border border-white/10 overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
@@ -192,36 +191,36 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
                   subtitle="Kinetic weapon spinup and telemetry validation"
                   aspectRatio="aspect-video"
                   badge="TESTBENCH"
-                  badgeColor="#FF3366"
+                  badgeColor="#DC2626"
                 />
               </div>
             </div>
           </div>
 
           {/* Right Column: Liquid Glass Terminal Console */}
-          <div className="lg:col-span-5 glass-panel p-6 sm:p-8 space-y-5 border border-white/15 bg-[#0A0F1D]/80 shadow-[0_12px_45px_rgba(0,0,0,0.6)]">
+          <div className="lg:col-span-5 glass-panel p-6 sm:p-8 space-y-5 border border-white/15 bg-[#0d0d10] shadow-[0_12px_45px_rgba(0,0,0,0.6)]">
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-rose-400" />
+                <Terminal className="w-4 h-4 text-red-500" />
                 <span className="font-mono font-bold text-xs uppercase text-white">
                   {siteContent.signal.terminalTitle}
                 </span>
               </div>
-              <span className="text-[10px] text-red-500 bg-red-600/10 border border-red-600/30 px-2 py-0.5 rounded-full font-mono font-bold uppercase">
+              <span className="text-[10px] text-red-400 bg-red-600/10 border border-red-600/30 px-2 py-0.5 rounded-full font-mono font-bold uppercase">
                 {siteContent.signal.terminalPort}
               </span>
             </div>
 
             {formSubmitted ? (
               <div className="p-8 rounded-2xl bg-white/[0.04] border border-white/10 space-y-4 font-mono text-center">
-                <CheckCircle2 className="w-10 h-10 mx-auto text-red-600" />
+                <CheckCircle2 className="w-10 h-10 mx-auto text-red-500" />
                 <div className="font-bold text-base uppercase text-white">TRANSMISSION RECEIVED</div>
                 <p className="text-xs font-medium text-white/80 leading-relaxed">
                   {siteContent.signal.responseGuarantee}
                 </p>
                 <button
                   onClick={() => setFormSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-red-600 text-black text-xs font-bold uppercase cursor-pointer hover:bg-red-600 transition-colors"
+                  className="mt-4 px-6 py-2.5 rounded-full bg-red-600 text-white text-xs font-bold uppercase cursor-pointer hover:bg-red-500 transition-colors shadow-[0_0_15px_rgba(220,38,38,0.4)]"
                 >
                   TRANSMIT ANOTHER MESSAGE
                 </button>
@@ -288,7 +287,7 @@ export const SignalSection = ({ onNavigate }: SignalSectionProps) => {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-full bg-gradient-to-r from-rose-500 via-red-500 to-red-600 text-white font-bold uppercase hover:scale-[1.02] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_30px_rgba(255,51,102,0.4)] font-mono text-xs"
+                  className="w-full py-3.5 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold uppercase hover:scale-[1.02] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_25px_rgba(220,38,38,0.4)] font-mono text-xs"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>TRANSMIT MESSAGE</span>

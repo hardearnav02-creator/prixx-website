@@ -30,20 +30,21 @@ export const projects: Project[] = [
     code: 'KB-60',
     category: 'Kinetic Heavyweight Combat Robot',
     weightClass: '60 KG HEAVYWEIGHT',
-    description: 'High-torque kinetic disc combat robot forged from CNC-milled Hardox 500 monocoque armor. Engineered for catastrophic weapon impact delivering 14.2 kJ of rotational kinetic energy in national heavyweight brackets.',
+    description: 'High-torque kinetic disc combat robot forged from CNC-milled Hardox 500 monocoque armor. Built for catastrophic weapon impact delivering 14.2 kJ of rotational kinetic energy in national heavyweight brackets.',
     year: '2025',
     model3d: '/models/your-model.stl',
     image: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&q=80',
     team: ['Sushant Barde', 'Sainath Biradar'],
     achievements: ['1st Prize Parul 60kg Robowar', '2nd Prize COEP MindSpark \'25'],
     accent: 'red',
-    editorialLeft: 'THESE MACHINES ARE FORMED WITHIN THE ARENA ITSELF.',
-    editorialRight: 'SHAPED BY 14.2 KJ ROTATIONAL IMPACT, HARDOX 500, AND COMBAT DYNAMICS.',
+    editorialLeft: 'FORGED IN 14-DAY WORKSHOP SPRINTS AT BAVDHAN.',
+    editorialRight: '14.2 KJ ROTATIONAL IMPACT // HARDOX 500 MONOCOQUE CHASSIS.',
     specs: [
       { label: 'DISC WEAPON RPM', value: '11,000 RPM' },
-      { label: 'IMPACT ENERGY', value: '14.2 kJ' },
+      { label: 'KINETIC ENERGY', value: '14.2 kJ' },
       { label: 'ARMOR CHASSIS', value: 'Hardox 500 Monocoque' },
-      { label: 'DRIVE MOTORS', value: 'Dual Brushless 48V' },
+      { label: 'DRIVE MOTORS', value: 'Dual 48V Brushless' },
+      { label: 'WEAPON MOTOR', value: '8.0 kW Outrunner' },
       { label: 'WEIGHT CLASS', value: '60.0 KG' }
     ]
   },
@@ -61,13 +62,14 @@ export const projects: Project[] = [
     team: ['Sainath Biradar', 'Sushant Barde'],
     achievements: ['Hell In The Cell Finalist', 'WINGS 2026 Runner-Up'],
     accent: 'blue',
-    editorialLeft: 'BUILT FOR AGGRESSIVE VECTOR CONTROL AND UNDER-ARMOR PENETRATION.',
+    editorialLeft: 'AGGRESSIVE VECTOR CONTROL AND UNDER-ARMOR PENETRATION.',
     editorialRight: 'PRECISION CNC BILLET MACHINED WITH 28 KM/H ARENA MOBILITY.',
     specs: [
       { label: 'WEAPON ROTOR', value: 'Asymmetric Drum' },
       { label: 'TOP SPRINT SPEED', value: '28 km/h' },
       { label: 'CHASSIS ALLOY', value: '7075-T6 Aerospace' },
-      { label: 'IMPACT REACTION', value: '< 1.5 ms Ground Snap' },
+      { label: 'GROUND CLEARANCE', value: '4.5 mm Razor Wedge' },
+      { label: 'MATCH REACTION', value: '< 1.5 ms Direct RF' },
       { label: 'WEIGHT CLASS', value: '15.0 KG' }
     ]
   },
@@ -88,9 +90,10 @@ export const projects: Project[] = [
     editorialRight: 'PERFECT 100/100 SCORE WITH HIGH-SPEED CAN-FD REALTIME ARCHITECTURE.',
     specs: [
       { label: 'STAGE 1 SCORE', value: '100 / 100 PERFECT' },
-      { label: 'POSITION ERROR', value: '< 0.8 mm' },
-      { label: 'TELEMETRY BUS', value: 'CAN-FD + ROS2' },
-      { label: 'CONTROL LATENCY', value: '1.2 ms' },
+      { label: 'POSITION ERROR', value: '< 0.8 mm Closed-Loop' },
+      { label: 'TELEMETRY BUS', value: 'CAN-FD + ROS 2' },
+      { label: 'CONTROL LATENCY', value: '1.2 ms Deterministic' },
+      { label: 'DRIVER RATING', value: '60A Dual H-Bridge' },
       { label: 'NATIONAL FINISH', value: 'AIR 1 · 4 · 8' }
     ]
   },
@@ -111,9 +114,10 @@ export const projects: Project[] = [
     editorialRight: 'OFFICIAL ARAI-AMTIF NATIONAL DEFENSE EXPO EXHIBITION BOOTH.',
     specs: [
       { label: 'KINEMATICS', value: 'Rocker-Bogie 6-Wheel' },
-      { label: 'ACTIVE RUNTIME', value: '4.5 Hours Active' },
-      { label: 'OBSTACLE CLEARANCE', value: '220 mm Step' },
-      { label: 'PAYLOAD GIMBAL', value: 'Modular Optical' },
+      { label: 'ACTIVE RUNTIME', value: '4.5 Hours Continuous' },
+      { label: 'STEP CLEARANCE', value: '220 mm Vertical Step' },
+      { label: 'PAYLOAD GIMBAL', value: 'Modular Optical 3-Axis' },
+      { label: 'TELEMETRY LINK', value: '2.4 GHz Encrypted RF' },
       { label: 'TERRAIN RATING', value: 'Grade-4 Rough Terrain' }
     ]
   },
@@ -133,11 +137,12 @@ export const projects: Project[] = [
     editorialLeft: 'SUB-MILLISECOND TACTICAL SENSING AND UNDEFEATED RING CLEARANCE.',
     editorialRight: 'HIGH-TORQUE PLANETARY GEARBOX WITH 180N MAGNETIC DOWNFORCE.',
     specs: [
-      { label: 'DOWNFORCE PULL', value: '180 N Neodymium' },
+      { label: 'DOWNFORCE PULL', value: '180 N Neodymium Rig' },
       { label: 'EDGE REACTION', value: '0.4 ms Optocoupled' },
+      { label: 'GEAR RATIO', value: '30:1 All-Steel Planetary' },
       { label: 'TOURNAMENT RECORD', value: 'Undefeated 1st Place' },
       { label: 'CHASSIS PROFILE', value: 'Ground-Hugging Steel' },
-      { label: 'WEIGHT CLASS', value: '3.0 KG Auto' }
+      { label: 'WEIGHT CLASS', value: '3.0 KG Autonomous' }
     ]
   }
 ];

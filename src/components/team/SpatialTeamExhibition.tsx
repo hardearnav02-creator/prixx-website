@@ -1,10 +1,10 @@
 // src/components/team/SpatialTeamExhibition.tsx
-// Spatial Team Exhibition Runway — Liquid Glass Operative Cards
-// Inspired by Mind Robotics & Boon Global
+// Spatial Team Exhibition Runway — Industrial Brutalist Crew Cards
+// Crisp monospace typography, deep obsidian cards, and surgical ruby red laser accents.
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Camera, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { TeamMember } from '../../data/team.ts';
 
 interface SpatialTeamExhibitionProps {
@@ -20,7 +20,7 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
 
   return (
     <div className="relative w-full overflow-hidden select-none py-4">
-      {/* Horizontal Liquid Glass Runway */}
+      {/* Horizontal Engineering Runway */}
       <div
         className="relative w-full overflow-x-auto pb-12 pt-4 no-scrollbar cursor-grab active:cursor-grabbing"
         style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-x pan-y' }}
@@ -44,12 +44,12 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
                 } glass-panel border border-white/10 hover:border-red-600/50 hover:bg-white/[0.05]`}
                 style={{
                   boxShadow: isHovered
-                    ? '0 16px 45px rgba(37, 99, 235, 0.2), 0 0 20px rgba(59, 130, 246, 0.3)'
+                    ? '0 16px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(220, 38, 38, 0.25)'
                     : '0 8px 32px rgba(0, 0, 0, 0.45)',
                   transform: isHovered ? 'translateY(-6px)' : 'none',
                 }}
               >
-                {/* Background Ambient Glow & Reticle */}
+                {/* Background Photo Watermark */}
                 <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20 rounded-2xl">
                   {member.image ? (
                     <img
@@ -61,37 +61,31 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
                       }}
                     />
                   ) : null}
-
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-48 h-48 border border-dashed border-white/20 flex items-center justify-center rounded-full">
-                      <Camera className="w-10 h-10 text-white/20 stroke-[1.2]" />
-                    </div>
-                  </div>
                 </div>
 
                 {/* Top Number & Role Bar */}
                 <div className="relative z-10 flex items-center justify-between border-b border-white/10 pb-4">
                   <div className="flex items-center gap-3">
-                    <span className="font-mono font-bold text-2xl sm:text-3xl text-red-600/90 leading-none">
+                    <span className="font-mono font-bold text-2xl sm:text-3xl text-red-500 leading-none">
                       #{member.number}
                     </span>
-                    <span className="px-2.5 py-1 rounded-full bg-red-600/10 border border-red-600/30 text-red-500 font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider">
+                    <span className="px-2.5 py-1 rounded-full bg-red-600/10 border border-red-600/30 text-red-400 font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider">
                       {member.shortRole || member.role}
                     </span>
                   </div>
 
                   <div className="font-mono text-[10px] text-white/50 font-bold uppercase tracking-wider hidden sm:block">
-                    OPERATIVE // 26
+                    CREW // 25-26
                   </div>
                 </div>
 
-                {/* Operative Identity */}
+                {/* Crew Member Identity */}
                 <div className="relative z-10 my-6 space-y-2">
                   <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-tight leading-[0.95] group-hover:text-red-500 transition-colors">
                     {member.name}
                   </h3>
-                  <div className="font-mono text-xs font-bold text-rose-400 uppercase flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose-400 shadow-[0_0_8px_#FF3366]" />
+                  <div className="font-mono text-xs font-bold text-red-400 uppercase flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_6px_#DC2626]" />
                     <span>{member.division}</span>
                   </div>
                   {member.description && (
@@ -101,7 +95,7 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
                   )}
                 </div>
 
-                {/* Tactical Credentials & Hardware Tags */}
+                {/* Engineering Credentials & Hardware Tags */}
                 <div className="relative z-10 space-y-4 border-t border-white/10 pt-4">
                   <div className="space-y-1.5 font-mono text-xs">
                     {member.achievements.slice(0, 2).map((ach, aIdx) => (
@@ -109,7 +103,7 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
                         key={aIdx}
                         className="flex items-start gap-2 text-white/90 font-medium leading-tight"
                       >
-                        <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-red-600" />
+                        <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-red-500" />
                         <span className="text-[11px] uppercase line-clamp-1">{ach}</span>
                       </div>
                     ))}
@@ -134,7 +128,7 @@ export const SpatialTeamExhibition: React.FC<SpatialTeamExhibitionProps> = ({
                     <span className="text-white/60 group-hover:text-red-500 uppercase text-[11px] transition-colors">
                       VIEW FULL DOSSIER
                     </span>
-                    <div className="p-1.5 rounded-full bg-red-600 text-black shadow-[0_0_12px_#DC2626] group-hover:scale-110 transition-transform">
+                    <div className="p-1.5 rounded-full bg-red-600 text-white shadow-[0_0_12px_#DC2626] group-hover:scale-110 transition-transform">
                       <ArrowUpRight className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
                   </div>
