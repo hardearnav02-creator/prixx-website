@@ -88,7 +88,7 @@ export const coreTeamMembers: TeamMember[] = [
     featured: true,
     projects: ['Technothon Autonomous Sumo Bot', 'Russia Expedition Module'],
     tags: ['Russia Delegate', 'Sumo Champion', 'Techfest 2025', 'Symbiosis Runner-Up'],
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80',
+    image: 'public/assets/team/kullu.png',
     mediaPlaceholder: 'Kulshresht with Sumo robot or giant cheque',
     division: 'Strategy & Flight'
   },
