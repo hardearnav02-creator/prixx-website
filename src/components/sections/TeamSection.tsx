@@ -127,7 +127,7 @@ export const TeamSection = ({ onNavigate }: TeamSectionProps) => {
           {/* Search, Division Badges, and Format Toggle */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 pt-4 border-t border-white/10 font-mono">
             {/* Search Input */}
-            <div className="lg:col-span-4 relative">
+            <div className="lg:col-span-4 relative self-center">
               <Search className="w-4 h-4 text-white/50 absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
