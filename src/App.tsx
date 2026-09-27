@@ -47,11 +47,12 @@ export default function App() {
   // Keyboard navigation for multi-slide experience (1-5 keys, Arrow keys)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Don't trigger when typing in inputs/textareas
+      // Don't trigger when typing in inputs/textareas or when a modal is active
       if (
         document.activeElement?.tagName === 'INPUT' ||
         document.activeElement?.tagName === 'TEXTAREA' ||
-        document.activeElement?.tagName === 'SELECT'
+        document.activeElement?.tagName === 'SELECT' ||
+        document.body.style.overflow === 'hidden'
       ) {
         return;
       }
