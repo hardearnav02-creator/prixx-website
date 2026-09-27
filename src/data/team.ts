@@ -528,7 +528,7 @@ export const juniorMembers: TeamMember[] = [
     name: 'Balaji Gurav',
     role: 'Hardware & Software Engineering',
     shortRole: 'Hardware & Software',
-    description: 'Computer Science engineer developing omain hardware logic.',
+    description: 'Computer Science engineer developing embedded hardware and software logic.',
     achievements: [
       '3rd Place — Smart India Hackathon (SIH)',
       'Hardware & Software Subsystem Integration'
